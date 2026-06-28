@@ -114,7 +114,7 @@ export const OptimizedResumeSection: React.FC = () => {
       {resumeRecommendationLoading && (
         <div className="py-12 flex flex-col items-center justify-center space-y-3">
           <Loader2 className="w-8 h-8 text-[var(--primary-base)] animate-spin" />
-          <p className="text-xs text-slate-500 font-mono">Synthesizing optimized single-column resume formatting...</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 font-mono">Synthesizing optimized single-column resume formatting...</p>
         </div>
       )}
 
@@ -282,7 +282,7 @@ export const OptimizedResumeSection: React.FC = () => {
                       <p className="text-[10px] text-[var(--secondary-base)] font-bold">{exp.company}</p>
                       <ul className="list-disc list-inside space-y-1 pl-1">
                         {exp.bullet_points.map((bullet, bIdx) => (
-                          <li key={bIdx} className="text-xs text-slate-500 dark:text-slate-450 leading-relaxed pl-1">
+                          <li key={bIdx} className="text-xs text-slate-500 dark:text-slate-300 leading-relaxed pl-1">
                             <span className="align-middle">{bullet}</span>
                           </li>
                         ))}
@@ -307,7 +307,7 @@ export const OptimizedResumeSection: React.FC = () => {
                         </div>
                         <ul className="list-disc list-inside space-y-0.5 pl-1">
                           {proj.bullet_points.map((bullet, bIdx) => (
-                            <li key={bIdx} className="text-xs text-slate-500 dark:text-slate-455 leading-relaxed pl-1">
+                            <li key={bIdx} className="text-xs text-slate-500 dark:text-slate-300 leading-relaxed pl-1">
                               {bullet}
                             </li>
                           ))}
@@ -328,7 +328,7 @@ export const OptimizedResumeSection: React.FC = () => {
                     <div key={idx} className="flex justify-between text-xs">
                       <span>
                         <span className="font-bold text-slate-900 dark:text-white">{edu.degree}</span>
-                        <span className="text-slate-500"> - {edu.institution}</span>
+                        <span className="text-slate-500 dark:text-slate-400"> - {edu.institution}</span>
                       </span>
                       <span className="text-slate-400 font-mono text-[10px]">{edu.year}</span>
                     </div>

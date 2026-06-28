@@ -67,16 +67,13 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ isVisible, onCan
     };
   }, [isVisible]);
 
-  if (!isVisible) return null;
-
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-app)]/90 backdrop-blur-xl transition-colors duration-300 overflow-y-auto px-4"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-app)]/95 backdrop-blur-xl transition-colors duration-300 overflow-y-auto px-4"
+    >
         <div className="max-w-xl w-full flex flex-col items-center justify-center text-center space-y-8 py-8 relative">
           
           {/* Animated Glowing AI Orb */}
@@ -135,7 +132,7 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ isVisible, onCan
               </AnimatePresence>
             </div>
             
-            <p className="text-xs text-slate-400 dark:text-slate-500 font-medium h-5 italic">
+            <p className="text-xs text-slate-400 dark:text-slate-400 font-medium h-5 italic">
               {RECRUITER_QUOTES[quoteIndex]}
             </p>
           </div>
@@ -179,7 +176,6 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({ isVisible, onCan
 
         </div>
       </motion.div>
-    </AnimatePresence>
   );
 };
 export default LoadingOverlay;

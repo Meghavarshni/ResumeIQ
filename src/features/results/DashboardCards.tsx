@@ -465,7 +465,7 @@ export const AtsSuggestionsCard: React.FC<AtsSuggestionsCardProps> = ({ suggesti
             ))}
           </div>
         ) : (
-          <p className="text-xs text-slate-500 italic">No layout warnings detected. Formatting complies with standard models.</p>
+          <p className="text-xs text-slate-500 dark:text-slate-400 italic">No layout warnings detected. Formatting complies with standard models.</p>
         )}
 
       </div>

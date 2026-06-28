@@ -300,7 +300,7 @@ export const ComparisonPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs leading-relaxed">
           <div className="space-y-1.5">
             <span className="text-[10px] text-slate-400 font-bold uppercase">Version A Summary</span>
-            <p className="text-slate-500 p-3 rounded-xl border border-[var(--border-premium)] bg-[var(--bg-app)]/30 font-medium">
+            <p className="text-slate-600 dark:text-slate-350 p-3 rounded-xl border border-[var(--border-premium)] bg-[var(--bg-app)]/30 font-medium">
               {runA.aiSummary}
             </p>
           </div>

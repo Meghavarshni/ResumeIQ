@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Briefcase, Info, ShieldAlert, Cpu } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 import { useResumeStore } from '../../store/useResumeStore';
 import { useToast } from '../../providers/ToastProvider';
 import { calculateATSScore } from '../../utils/atsEngine';
@@ -263,7 +264,11 @@ export const JobDescriptionCard: React.FC = () => {
       </GlassCard>
 
       {/* Loading Overlay portal */}
-      <LoadingOverlay isVisible={analysisLoading} onCancel={handleCancel} />
+      <AnimatePresence>
+        {analysisLoading && (
+          <LoadingOverlay isVisible={analysisLoading} onCancel={handleCancel} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
